@@ -36,24 +36,6 @@ export default function BlogPost() {
             ...blogSnap.data()
           }
           setBlogData(data)
-
-          // Update document title and meta tags dynamically
-          if (typeof window !== 'undefined') {
-            document.title = data.title
-
-            // Update Open Graph meta tags
-            updateMetaTag('property', 'og:title', data.title)
-            updateMetaTag('property', 'og:description', stripHtml(data.content).slice(0, 150))
-            updateMetaTag('property', 'og:image', data.image)
-            updateMetaTag('property', 'og:url', `https://www.clatians.in/blogs/${params.id}`)
-            updateMetaTag('property', 'og:type', 'article')
-
-            // Update Twitter Card meta tags
-            updateMetaTag('name', 'twitter:card', 'summary_large_image')
-            updateMetaTag('name', 'twitter:title', data.title)
-            updateMetaTag('name', 'twitter:description', stripHtml(data.content).slice(0, 150))
-            updateMetaTag('name', 'twitter:image', data.image)
-          }
         } else {
           setError("Blog not found")
         }
@@ -69,20 +51,6 @@ export default function BlogPost() {
       fetchBlogData()
     }
   }, [params.id])
-
-  // Helper function to update meta tags
-  const updateMetaTag = (attribute, attributeValue, content) => {
-    let element = document.querySelector(`meta[${attribute}="${attributeValue}"]`)
-    if (!element) {
-      element = document.createElement('meta')
-      element.setAttribute(attribute, attributeValue)
-      document.head.appendChild(element)
-    }
-    element.setAttribute('content', content)
-  }
-
-  // Helper function to strip HTML tags
-  const stripHtml = (html) => html.replace(/<[^>]*>?/gm, '')
 
   // Function to handle social media sharing
   const handleShare = (platform) => {

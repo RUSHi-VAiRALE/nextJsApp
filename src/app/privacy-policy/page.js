@@ -1,15 +1,9 @@
 'use client'
 import React from 'react'
-import Head from 'next/head'
 
 export default function PrivacyPolicy() {
   return (
     <div className="bg-[#E7EDFF] min-h-screen">
-      <Head>
-        <title>Privacy Policy - CLATians</title>
-        <meta name="description" content="Privacy Policy for CLATians - Your trusted institute for CLAT, AILET, and other law entrance preparations." />
-      </Head>
-      
       <div className="container mx-auto px-4 py-12 max-w-5xl">
         <div className="bg-white rounded-lg shadow-md p-6 md:p-10">
           <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-800 border-b pb-4 border-gray-200">Privacy Policy</h1>

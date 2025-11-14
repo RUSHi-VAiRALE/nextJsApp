@@ -5,7 +5,6 @@ import Image from "next/image"
 import { FaSearch, FaTimes } from "react-icons/fa"
 import { getFirestore, collection, getDocs } from 'firebase/firestore'
 import { app } from '@/firebase'
-import Head from 'next/head'
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null)
@@ -53,10 +52,6 @@ export default function Gallery() {
 
   return (
     <>
-      <Head>
-        <title>Clatians Ai</title>
-        <meta property="og:title" content="Hello clatians Seo" />
-      </Head>
       <AboutHero route="Home" page="Gallery" />
 
       <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-red-50">

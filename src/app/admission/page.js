@@ -11,6 +11,24 @@ import ScholarshipSteps from "@/components/ScholarshipSteps";
 import StudentTestimonials from "@/components/StudentTestimonials";
 import AlternatingCarousel from "@/components/AlternatingCarousel";
 
+export const metadata = {
+  title: 'Scholarship & Admission | CLAT Coaching in Patna – CLATians Law Entrance Institute Bihar',
+  description: 'Apply now for Scholarship & get admissions at CLATians – the premium law entrance coaching institute in Patna, Bihar. Join our CLAT / AILET / CUET (Law) batches, avail scholarships & expert guidance for top National Law Universities.',
+  keywords: 'CLAT scholarship, admission CLATians Patna, law entrance coaching Bihar, CLAT coaching admission',
+  openGraph: {
+    title: 'Scholarship & Admission | CLAT Coaching in Patna – CLATians Law Entrance Institute Bihar',
+    description: 'Apply now for Scholarship & get admissions at CLATians – the premium law entrance coaching institute in Patna, Bihar. Join our CLAT / AILET / CUET (Law) batches, avail scholarships & expert guidance for top National Law Universities.',
+    url: 'https://www.clatians.in/admission',
+    siteName: 'CLATians',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Scholarship & Admission | CLAT Coaching in Patna – CLATians Law Entrance Institute Bihar',
+    description: 'Apply now for Scholarship & get admissions at CLATians – the premium law entrance coaching institute in Patna, Bihar. Join our CLAT / AILET / CUET (Law) batches, avail scholarships & expert guidance for top National Law Universities.',
+  },
+}
+
 export default function Admission() {
     const faqs = [
     { 

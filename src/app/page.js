@@ -1,5 +1,3 @@
-'use client'
-
 import Hero from '@/components/Hero'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import Features from '@/components/Features'
@@ -15,41 +13,52 @@ import LearningResources from '@/components/LearningResources'
 const ExploreTopCourses = dynamic(() => import('@/components/ExploreTopCourses'), {
   loading: () => <div className="py-12 flex justify-center items-center">
     <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
-  </div>,
-  ssr: false
+  </div>
 })
 
 const StudentTestimonials = dynamic(() => import('@/components/StudentTestimonials'), {
   loading: () => <div className="py-12 bg-[#e7edff] flex justify-center items-center">
     <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
-  </div>,
-  ssr: false
+  </div>
 })
 
 const TeacherSection = dynamic(() => import('@/components/TeacherSection'), {
   loading: () => <div className="py-12 bg-[#e7edff] flex justify-center items-center">
     <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
-  </div>,
-  ssr: false
+  </div>
 })
 
 const BlogSection = dynamic(() => import('@/components/BlogSection'), {
   loading: () => <div className="py-12 bg-[#e7edff] flex justify-center items-center">
     <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
-  </div>,
-  ssr: false
+  </div>
 })
 
 const Events = dynamic(() => import('@/components/Events'), {
   loading: () => <div className="py-12 bg-[#e7edff] flex justify-center items-center">
     <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-orange-500"></div>
-  </div>,
-  ssr: false
+  </div>
 })
 
-const AlternatingCarousel = dynamic(() => import('@/components/AlternatingCarousel'), {
-  ssr: false
-})
+const AlternatingCarousel = dynamic(() => import('@/components/AlternatingCarousel'))
+
+export const metadata = {
+  title: 'Best CLAT Coaching in Patna, Bihar – CLATians | Law Entrance Institute',
+  description: 'CLATians offers the best CLAT & law entrance coaching in Patna, Bihar. Get expert guidance, mock tests & current affairs prep to crack CLAT / AILET / CUET and more.',
+  keywords: 'CLAT coaching Patna, law entrance coaching Bihar, best CLAT institute Patna, AILET coaching, CUET law coaching',
+  openGraph: {
+    title: 'Best CLAT Coaching in Patna, Bihar – CLATians | Law Entrance Institute',
+    description: 'CLATians offers the best CLAT & law entrance coaching in Patna, Bihar. Get expert guidance, mock tests & current affairs prep to crack CLAT / AILET / CUET and more.',
+    url: 'https://www.clatians.in',
+    siteName: 'CLATians',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best CLAT Coaching in Patna, Bihar – CLATians | Law Entrance Institute',
+    description: 'CLATians offers the best CLAT & law entrance coaching in Patna, Bihar. Get expert guidance, mock tests & current affairs prep to crack CLAT / AILET / CUET and more.',
+  },
+}
 
 export default function Home() {
   const faqs = [
